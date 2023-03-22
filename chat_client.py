@@ -1,7 +1,6 @@
 # Чат клиент
 import socket
 import select
-import sys
 import threading
 
 server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
@@ -26,5 +25,4 @@ while True:
     server.send(message)
     print('<Вы> ')
     print(message.decode())
-    # sys.stdout.flush()
 server.close()
